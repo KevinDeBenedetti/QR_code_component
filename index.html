@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <script src="https://cdn.tailwindcss.com"></script>
+<!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   
@@ -12,17 +17,43 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    :root {
+      --Light_gray: hsl(212, 45%, 89%);
+      --Grayish_blue: hsl(220, 15%, 55%);
+      --Dark_blue: hsl(218, 44%, 22%);
+    }
+
+    h1 {
+      color: var(--Dark_blue);
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+    }
+
+    p {
+      color: var(--Grayish_blue);
+      font-family: 'Outfit', sans-serif;
+      font-size: 15px;
+    }
   </style>
 </head>
-<body>
+<body class="h-screen flex flex-col" style="background-color: var(--Light_gray)">
 
-  <div id="challenge">
+  <div id="challenge" class="h-full flex">
 
+    <div class="h-[500px] w-[320px] border border-grey-300 bg-white m-auto rounded-xl p-4 flex flex-col">
+
+      <img class="rounded-xl" height="576" width="576" src="images/image-qr-code.png" alt="QR Code">
+
+      <h1 class="text-center mt-1 font-bold text-[20px] p-3">Improve your front-end skills by Building projects</h1>
+
+      <p class="text-center mt-1 p-3">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+
+    </div>
   </div>
   
-  <div class="attribution">
+  <footer class="attribution fixed bottom-0">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://www.kevindb.dev/" target="_blank">Kevin De Benedetti</a>.
+  </footer>
 </body>
 </html>
